@@ -1,0 +1,23 @@
+{
+  "name": "prana-archaius-client",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./lib/client.js",
+  "dependencies": {
+    "rx": "4.0.6",
+    "sync-request": "2.1.0"
+  },
+  "description": "Prana client for geting property values from Archaius",
+  "devDependencies": {
+    "mockserver": "1.2.3"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "prana",
+    "archaius"
+  ],
+  "author": "Erik Gustafsson",
+  "license": "ISC"
+}
