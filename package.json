@@ -1,18 +1,17 @@
 {
   "name": "prana-archaius-client",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "main": "./lib/client.js",
   "dependencies": {
     "rx": "4.0.6",
     "sync-request": "2.1.0"
   },
-  "description": "Prana client for geting property values from Archaius",
+  "description": "Prana client for getting property values from Netflix Prana Archaius API",
   "devDependencies": {
     "mockserver": "1.2.3"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "nodeunit test/test.js"
   },
   "keywords": [
     "prana",
