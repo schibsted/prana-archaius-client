@@ -1,6 +1,6 @@
 'use strict';
 
-var archaiusClient = require('../lib/client.js')
+var prana = require('../lib/client.js')
 var spawn = require('child_process')
 
 var port = 7002;
@@ -48,7 +48,11 @@ exports.integrationTest = {
             port: port
         };
 
-        var config = archaiusClient.syncRequest(props, options);
+        console.log('sdfsdf')
+
+        var archaiusClient = prana.archaius(options)
+
+        var config = archaiusClient.syncRequest(props);
 
         test.equal(config.env, "dev", 'Failed to get proper config values');
         test.equal(config.port, 8000, 'Failed to get proper config values');
@@ -72,7 +76,9 @@ exports.integrationTest = {
             port: port
         };
 
-        archaiusClient.asyncRequest(props, options, function (config) {
+        var archaiusClient = prana.archaius(options)
+
+        archaiusClient.asyncRequest(props, function (config) {
 
             test.equal(config.env, "dev", 'Failed to get proper config values');
             test.equal(config.port, 8000, 'Failed to get proper config values');
