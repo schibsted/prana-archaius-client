@@ -8,9 +8,12 @@
   },
   "description": "Prana client for getting property values from Netflix Prana Archaius API",
   "devDependencies": {
-    "mockserver": "1.2.3"
+    "jslint": "^0.9.5",
+    "mockserver": "1.2.3",
+    "nodeunit": "^0.9.1"
   },
   "scripts": {
+    "jslint": "jslint lib/client.js test/test.js",
     "test": "nodeunit test/test.js"
   },
   "keywords": [
